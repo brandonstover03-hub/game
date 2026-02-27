@@ -3,8 +3,8 @@
 A scalable, data-driven single-player grand strategy simulation focused on economy, empire management, AI, and automatic military resolution.
 
 ## Language & Stack
-- **Python 3** backend simulation
-- **Browser client** with **Three.js** for a 3D world view
+- **Python 3** simulation core
+- **Standalone desktop app** built with Tkinter (no browser required)
 - Object-oriented modules with clean system separation
 - Data-driven content via JSON (`strategy_game/data`)
 
@@ -13,13 +13,10 @@ A scalable, data-driven single-player grand strategy simulation focused on econo
 ```text
 .
 ├── main.py
-├── web/
-│   ├── index.html
-│   ├── app.js
-│   └── styles.css
+├── standalone_app.py
 ├── strategy_game/
 │   ├── game.py
-│   ├── web_server.py
+│   ├── desktop_app.py
 │   ├── models/
 │   │   └── entities.py
 │   ├── systems/
@@ -42,13 +39,12 @@ A scalable, data-driven single-player grand strategy simulation focused on econo
 ## Implemented Deliverables
 - Procedural province-based map generation with terrain/resource/population/stability/infrastructure.
 - Deep economy simulation (production chains, classes, taxation, trade, prices, inflation, upkeep, seasonal output).
-- Inflation linked to **world market movement**: each empire inflation now incorporates a global inflation signal from aggregate price changes.
+- Inflation linked to **world market movement**: each empire inflation incorporates a global inflation signal from aggregate price changes.
 - AI empire logic (economy-first growth, expansion, diplomacy posture, threat-based army growth).
 - Auto-battle simulator with unit counters, terrain and tech modifiers, morale, commanders, supply effects, variance, and report output.
 - Multiple victory conditions: economic, military, technological, cultural, diplomatic.
 - Configurable difficulty and explicit balance tuning variables in config.
-- Custom player empire naming in CLI and browser new-game flow.
-- Browser 3D map visualization for provinces (Three.js), with turn progression via API.
+- Custom player empire naming in CLI and standalone desktop app.
 
 ## Run (CLI)
 
@@ -56,10 +52,18 @@ A scalable, data-driven single-player grand strategy simulation focused on econo
 python main.py --turns 12 --difficulty normal --empire-name "My Empire"
 ```
 
-## Run (Browser + 3D)
+## Run (Standalone App)
 
 ```bash
-python -m strategy_game.web_server
+python standalone_app.py
 ```
 
-Open `http://127.0.0.1:8000` and create a game with your chosen empire name.
+## Optional: Build a downloadable executable
+If you want to share without requiring Python:
+
+```bash
+python -m pip install pyinstaller
+pyinstaller --onefile --windowed standalone_app.py --name grand-strategy
+```
+
+The built executable will appear under `dist/`.
