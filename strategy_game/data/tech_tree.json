@@ -1,0 +1,7 @@
+{
+  "agriculture_i": {"name": "Agriculture I", "cost": 120, "effects": {"food_multiplier": 0.08}, "requires": []},
+  "logistics_i": {"name": "Logistics I", "cost": 150, "effects": {"supply_efficiency": 0.1}, "requires": []},
+  "metallurgy_i": {"name": "Metallurgy I", "cost": 180, "effects": {"iron_multiplier": 0.1, "unit_attack": 0.03}, "requires": []},
+  "civil_service": {"name": "Civil Service", "cost": 220, "effects": {"tax_efficiency": 0.1, "stability": 2}, "requires": ["agriculture_i"]},
+  "combined_arms": {"name": "Combined Arms", "cost": 260, "effects": {"unit_defense": 0.05, "morale": 4}, "requires": ["logistics_i", "metallurgy_i"]}
+}
