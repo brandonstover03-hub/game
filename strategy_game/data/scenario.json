@@ -1,0 +1,19 @@
+{
+  "player_empire": {
+    "name": "Auroria",
+    "treasury": 1400,
+    "research": 0,
+    "stability": 68,
+    "happiness": 62,
+    "technology": ["agriculture_i"],
+    "policies": ["balanced_budget"],
+    "advisors": [
+      {"name": "Cassia", "trait": "economic_planner"},
+      {"name": "Darius", "trait": "defensive_commander"}
+    ]
+  },
+  "ai_empires": [
+    {"name": "Velkar Dominion", "treasury": 1200, "stability": 64, "personality": "expansionist"},
+    {"name": "Sable Compact", "treasury": 1350, "stability": 72, "personality": "merchant"}
+  ]
+}

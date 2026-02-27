@@ -1,0 +1,23 @@
+{
+  "world": {"width": 7, "height": 7, "seed": 42},
+  "difficulty": {
+    "normal": {"ai_economy_bonus": 0.05, "ai_military_bonus": 0.03, "rebellion_risk_multiplier": 1.0},
+    "hard": {"ai_economy_bonus": 0.12, "ai_military_bonus": 0.08, "rebellion_risk_multiplier": 1.15}
+  },
+  "balance": {
+    "base_tax_rate": 0.18,
+    "inflation_sensitivity": 0.0007,
+    "late_game_drag_start_turn": 40,
+    "late_game_drag_per_turn": 0.004,
+    "season_modifiers": {"spring": 1.05, "summer": 1.0, "autumn": 1.1, "winter": 0.82},
+    "trade_price_elasticity": 0.12,
+    "battle_random_variance": 0.08
+  },
+  "victory": {
+    "economic_gold": 25000,
+    "military_provinces": 20,
+    "technology_count": 5,
+    "cultural_influence": 120,
+    "diplomatic_score": 80
+  }
+}

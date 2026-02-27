@@ -1,0 +1,8 @@
+{
+  "farm": {"chain": "food", "base_output": {"food": 18}, "workforce": "peasants"},
+  "lumberyard": {"chain": "wood", "base_output": {"wood": 14}, "workforce": "workers"},
+  "quarry": {"chain": "stone", "base_output": {"stone": 12}, "workforce": "workers"},
+  "mine": {"chain": "iron", "base_output": {"iron": 10}, "workforce": "workers"},
+  "foundry": {"chain": "refined", "input": {"iron": 6, "wood": 2}, "base_output": {"advanced_goods": 5}, "workforce": "workers"},
+  "market": {"chain": "luxury", "input": {"advanced_goods": 3}, "base_output": {"luxury": 4, "gold": 8}, "workforce": "nobles"}
+}
